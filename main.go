@@ -13,7 +13,7 @@ func main() {
 		display(board)
 		switch getOption() {
 		case 'Q':
-			break
+			return
 		case 'a':
 			shiftLeft(board)
 		case 'd':
@@ -58,7 +58,7 @@ func has(board [][]int, val int) bool {
 func getOption() rune {
 	var char rune
 	for {
-		if fmt.Scanf("%c", &char); strings.ContainsRune("dsaw", char) {
+		if fmt.Scanf("%c", &char); strings.ContainsRune("dsawQ", char) {
 			break
 		}
 	}
