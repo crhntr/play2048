@@ -12,17 +12,17 @@ func main() {
 		addNumber(board)
 		display(board)
 		switch getOption() {
-		case 'd':
-			shiftLeft(board)
-		case 's':
-			shiftRight(board)
 		case 'a':
-			shiftUp(board)
+			shiftLeft(board)
+		case 'd':
+			shiftRight(board)
 		case 'w':
+			shiftUp(board)
+		case 's':
 			shiftDown(board)
 		}
 		if has(board, 2048) {
-			fmt.Println("Congradulations you got 2048")
+			fmt.Println("congradulations you got 2048")
 			break
 		}
 	}
