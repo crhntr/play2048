@@ -12,6 +12,8 @@ func main() {
 		addNumber(board)
 		display(board)
 		switch getOption() {
+		case 'Q':
+			break
 		case 'a':
 			shiftLeft(board)
 		case 'd':
