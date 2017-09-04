@@ -123,8 +123,7 @@ func shiftLeft(board [][]int) {
 }
 
 func shiftUp(board [][]int) {
-	i := 0
-	for j := range board[i] {
+	for j := range board[0] {
 		for step := len(board) - 1; step > 0; step-- {
 			for i := 0; i < len(board)-1; i++ {
 				slideTile(board, i, j, i+1, j)
@@ -134,8 +133,7 @@ func shiftUp(board [][]int) {
 }
 
 func shiftDown(board [][]int) {
-	i := 0
-	for j := range board[i] {
+	for j := range board[0] {
 		for step := len(board) - 1; step > 0; step-- {
 			for i := len(board) - 1; i >= 1; i-- {
 				slideTile(board, i, j, i-1, j)
