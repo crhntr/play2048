@@ -78,7 +78,7 @@ func setup(dim int) [][]int {
 }
 
 func display(board [][]int) {
-	fmt.Print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	fmt.Print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 	for _, row := range board {
 		for _, val := range row {
 			if val != 0 {
