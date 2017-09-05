@@ -7,7 +7,17 @@ import (
 )
 
 func main() {
-	board := setup(4)
+	var size int
+	for {
+		fmt.Print("enter a size: ")
+		fmt.Scanf("%d", &size)
+		if size >= 4 {
+			break
+		}
+		fmt.Println("Invalid size. The size must be greater than 3. Please try again.")
+	}
+
+	board := setup(size)
 	for has(board, 0) {
 		addNumber(board)
 		display(board)
