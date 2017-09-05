@@ -3,11 +3,24 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
+	"strconv"
 	"strings"
 )
 
+const minSize = 4
+
 func main() {
-	board := setup(4)
+	size := 4
+	if len(os.Args) > 1 {
+		size, _ = strconv.Atoi(os.Args[1])
+		if size < minSize {
+			fmt.Println("size must be valid and greater than or equal to 4")
+			os.Exit(1)
+		}
+	}
+
+	board := setup(size)
 	for has(board, 0) {
 		addNumber(board)
 		display(board)
