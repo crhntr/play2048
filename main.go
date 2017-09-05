@@ -1,13 +1,22 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"math/rand"
 	"strings"
 )
 
+var size int
+
+func init() {
+	flag.IntVar(&size, "size", 4, "size")
+}
+
 func main() {
-	board := setup(4)
+	flag.Parse()
+
+	board := setup(size)
 	for has(board, 0) {
 		addNumber(board)
 		display(board)
